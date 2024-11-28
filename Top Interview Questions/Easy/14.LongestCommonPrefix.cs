@@ -5,7 +5,7 @@ public class Solution {
         int n = strs.Length;
         if(n==1) return strs[0];
         int count = 0;
-        while(flag){
+        while(flag){ // loop through until prefix breaks (i.e, flag == false)
             for(int i=1; i<n; i++){
                 if(strs[i].Length > res && strs[0].Length > res && strs[0][res] == strs[i][res]){
                     count++;
@@ -14,7 +14,7 @@ public class Solution {
                     break;
                 }
             }
-            if(count == n-1) res = res+1;
+            if(count == n-1) res = res+1; // at this point, we found another char of prefix, so increment res value
             count=0;
         }
 
