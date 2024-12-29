@@ -2,7 +2,7 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
         if(s.length()!=t.length()) return false;
-        // 0 -> 26
+        // 0 -> 25
         // a -> z
         int[] arr = new int[26];
         // iterate through string s
