@@ -9,6 +9,8 @@
  *     }
  * }
  */
+// T.C = O(n+m); n is length of list1 and m is length of list2
+// S.C = O(1); constant space for result and temp nodes
 public class Solution {
     public ListNode MergeTwoLists(ListNode list1, ListNode list2) {
         ListNode res = new ListNode();

@@ -1,3 +1,5 @@
+// T.C = O(n); n is length of the array digits
+// S.C = O(n); length of the new array created in the worst case
 public class Solution {
     public int[] PlusOne(int[] digits) {
         int n = digits.Length;
@@ -22,6 +24,8 @@ public class Solution {
 }
 
 // Short solution with for loop
+// T.C = O(n); n is length of the array digits
+// S.C = O(n); length of the new array created in the worst case
 public class Solution {
     public int[] PlusOne(int[] digits) {
         for(int i=digits.Length-1; i>=0; i--){

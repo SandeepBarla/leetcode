@@ -1,4 +1,6 @@
 // Using Dictionary
+// T.C = O(n); n is length of the input string s
+// S.C = O(1); HashMap storage: 7, it just stores 7 key value pairs
 public class Solution {
     public int RomanToInt(string s) {
         Dictionary<char, int> dic = new Dictionary<char, int>();
@@ -28,6 +30,8 @@ public class Solution {
 }
 
 // Using pattern
+// T.C = O(n); n is length of the input string s
+// S.C = O(1); constant space for integers res and n
 public class Solution {
     public int RomanToInt(string s) {
         int res = 0;

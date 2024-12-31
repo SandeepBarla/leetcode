@@ -1,3 +1,5 @@
+// T.C = O(m*n); m is length of the string haystack and n is length of the string needle
+// S.C = O(1); constant space for variables
 public class Solution {
     public int StrStr(string haystack, string needle) {
         int j = 0;
@@ -18,8 +20,9 @@ public class Solution {
     }
 }
 
-
 // Using Substring
+// T.C = O(m*n); m is difference between length of the strings haystack and needle and n is length of substring
+// S.C = O(1); constant space
 public class Solution {
     public int StrStr(string haystack, string needle) {
         for(int i=0; i<=haystack.Length-needle.Length; i++){

@@ -1,3 +1,5 @@
+// T.C = O(m+n)
+// S.C = O(1)
 public class Solution {
     public void Merge(int[] nums1, int m, int[] nums2, int n) {
         int k=m+n-1; // start filling largest numbers from end of nums1

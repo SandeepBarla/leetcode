@@ -1,3 +1,6 @@
+// Using HashMap
+// T.C = O(n); n is size of nums array, hashmap operations take O(1) time for both lookup and insert
+// S.C = O(n); HashMap storage: n is size of nums array, output array has 2 elements so it is constant space
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
         Dictionary<int,int> dic = new Dictionary<int,int>();

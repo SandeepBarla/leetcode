@@ -1,4 +1,6 @@
 // Using Dictionary
+// T.C = O(n); n is length string s
+// S.C = O(n); size of stack in worst case
 public class Solution {
     public bool IsValid(string s) {
         Dictionary<char, char> dic = new Dictionary<char, char>(){
@@ -25,6 +27,8 @@ public class Solution {
 }
 
 // Without Using Dictionary
+// T.C = O(n); n is length string s
+// S.C = O(n); size of stack in worst case
 public class Solution {
    public bool IsValid(string s) {
         if(s==string.Empty) return true;
