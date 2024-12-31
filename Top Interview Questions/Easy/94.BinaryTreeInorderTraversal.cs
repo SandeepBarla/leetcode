@@ -12,7 +12,9 @@
  * }
  */
 
- // Recursive Approach
+// Recursive Approach
+// T.C = O(n); n is  number of nodes
+// S.C = O(n)
 public class Solution {
     public IList<int> InorderTraversal(TreeNode root) {
         List<int> res = new List<int>();
@@ -29,7 +31,9 @@ public class Solution {
     }
 }
 
- // Iterative approach with Stack
+// Iterative approach with Stack
+// T.C = O(n); n is  number of nodes
+// S.C = O(n)
 public class Solution {
     public IList<int> InorderTraversal(TreeNode root) {
         List<int> res = new List<int>();
