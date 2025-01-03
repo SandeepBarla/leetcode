@@ -13,6 +13,8 @@
  */
 
 // Recursive Approach
+// T.C = O(n); n is  number of nodes
+// S.C = O(h); h is height of tree
 public class Solution {
     public bool IsSymmetric(TreeNode root) {
         return CheckSymmetric(root.left, root.right); // recursive method to verify the mirror image of a node

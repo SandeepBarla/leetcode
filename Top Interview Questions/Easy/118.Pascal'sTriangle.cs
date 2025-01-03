@@ -1,3 +1,5 @@
+// T.C = O(n^2)
+// S.C = O(n^2)
 public class Solution {
     public IList<IList<int>> Generate(int numRows) {
         int[][] res = new int[numRows][];

@@ -12,18 +12,9 @@
  * }
  */
 
- // Recursive approach 1
-public class Solution {
-    public int MaxDepth(TreeNode root) {
-        return FindDepth(root);
-    }
-    private int FindDepth(TreeNode node){
-        if(node == null) return 0;
-        return 1+ Math.Max(FindDepth(node.left),FindDepth(node.right));
-    }
-}
-
- // Recursive approach 2
+// Recursive approach
+// T.C = O(n); n is  number of nodes
+// S.C = O(h); h is height of tree
 public class Solution {
     public int MaxDepth(TreeNode root) {
         if(root == null) return 0;

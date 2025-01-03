@@ -12,7 +12,9 @@
  * }
  */
 
- // Recursive Approach
+// Recursive Approach
+// T.C = O(n); n is  number of nodes
+// S.C = O(h); h is height of tree
 public class Solution {
     public TreeNode SortedArrayToBST(int[] nums) {
         return ConvertToBST(0, nums.Length - 1, nums);
