@@ -1,3 +1,5 @@
+// T.C = O(n^2); n is length of the string s
+// S.C = O(1)
 class Solution {
     public String longestPalindrome(String s) {
         int start = 0;

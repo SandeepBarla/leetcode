@@ -1,4 +1,6 @@
 // Using long or double
+// T.C = O(d); d is number of digits of integer x, which is proportional to (logx to base 10)
+// S.C = O(1)
 class Solution {
     public int reverse(int x) {
         long reverse = 0; // or you can use double as well
@@ -11,7 +13,9 @@ class Solution {
     }
 }
 
-// using string builder
+// Using string builder
+// T.C = O(d); d is number of digits of integer x, which is proportional to (logx to base 10)
+// S.C = O(d); d is number of digits of integer x, which is proportional to (logx to base 10)
 class Solution {
     public int reverse(int x) {
         StringBuilder result = new StringBuilder();
