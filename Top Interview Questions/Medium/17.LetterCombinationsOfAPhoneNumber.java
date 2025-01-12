@@ -35,7 +35,7 @@ class Solution {
 
 
 // Bruteforce approach
-// T.C = O(n^x); x is length of the string digits; n is 3 or 4
+// T.C = O(4^n); n is length of the string digits;
 // S.C = O(4^n * n); extra space for ouput list
 class Solution {
     public List<String> letterCombinations(String digits) {
