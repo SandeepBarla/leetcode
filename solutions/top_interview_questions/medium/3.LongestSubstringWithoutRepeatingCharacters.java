@@ -1,3 +1,4 @@
+package solutions.top_interview_questions.medium;
 // Using Bucket Array
 class Solution {
     public int lengthOfLongestSubstring(String s) {
