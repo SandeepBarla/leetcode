@@ -3,6 +3,8 @@ package solutions.top_interview_questions.medium;
 import common.ArrayUtils;
 import common.Solution;
 
+// T.C = O(n); n is length of the array nums
+// S.C = O(1)
 public class LC_55_JumpGame implements Solution{
     public boolean canJump(int[] nums) {
         int pos = nums.length-1;
