@@ -9,16 +9,23 @@ import common.Solution;
 
 // T.C = O(n*logn); n is number of intervals
 // S.C = O(n); n is number of intervals
-public class LC_56_MergeIntervals implements Solution{
-  public int[][] merge(int[][] intervals) {
-        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0],b[0]));
+public class LC_56_MergeIntervals implements Solution {
+    public int[][] merge(int[][] intervals) {
+        // sort intervals based on left range
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         List<int[]> result = new ArrayList<>();
         int[] prevInterval = intervals[0];
-        for(int i=1; i<intervals.length; i++){
+        // iterate through all the rows (intervals)
+        for (int i = 1; i < intervals.length; i++) {
             int[] currInterval = intervals[i];
-            if(prevInterval[1]>=currInterval[0]){
+            // if left range of current interval is greater than right range of previous
+            // interval
+            // those two are overlapping intervals merge them
+            if (prevInterval[1] >= currInterval[0]) {
                 prevInterval[1] = Math.max(prevInterval[1], currInterval[1]);
-            }else{
+            } else {
+                // else add the previous interval to result
+                // and update the current interval to prev interval
                 result.add(prevInterval);
                 prevInterval = intervals[i];
             }
@@ -27,14 +34,14 @@ public class LC_56_MergeIntervals implements Solution{
         return result.toArray(new int[result.size()][]);
     }
 
-  @Override
-  public void run() {
-        int[][] intervals = {{1,3},{2,6},{8,10},{15,18}};
-        
+    @Override
+    public void run() {
+        int[][] intervals = { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
+
         // Using ArrayUtils to print the array
         ArrayUtils.print2DArray("Input Array", intervals);
 
         ArrayUtils.print2DArray("Output Merged Array", merge(intervals));
-  }
-  
+    }
+
 }
