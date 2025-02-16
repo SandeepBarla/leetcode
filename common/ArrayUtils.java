@@ -18,6 +18,17 @@ public class ArrayUtils {
         }
     }
 
+    // ✅ Print a 2D character array with a label
+    public static void print2DCharArray(char[][] matrix) {
+        System.out.println("Board:");
+        for (char[] row : matrix) {
+            for (char ch : row) {
+                System.out.print(ch + " ");
+            }
+            System.out.println();
+        }
+    }
+
     // Print a list of integers with a label
     public static void printList(String label, List<Integer> list) {
         System.out.println(label + ": " + list);
