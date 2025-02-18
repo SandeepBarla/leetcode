@@ -34,11 +34,19 @@ public class ArrayUtils {
         System.out.println(label + ": " + list);
     }
 
-    // Print a list of lists (2D List) with a label (For problems like LC 78
-    // Subsets)
+    // ✅ Print a 2D List of Integers (For problems like LC 78: Subsets)
     public static void print2DList(String label, List<List<Integer>> listOfLists) {
         System.out.println(label + ":");
         for (List<Integer> list : listOfLists) {
+            System.out.println(list);
+        }
+    }
+
+    // ✅ Print a 2D List of Strings (For problems like LC 131: Palindrome
+    // Partitioning)
+    public static void print2DStringList(String label, List<List<String>> listOfLists) {
+        System.out.println(label + ":");
+        for (List<String> list : listOfLists) {
             System.out.println(list);
         }
     }
