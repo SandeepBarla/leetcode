@@ -111,7 +111,7 @@ public class LC_23_MergeKSortedLists implements Solution {
     };
 
     for (int i = 0; i < lists1.length; i++) {
-      LinkedListUtils.printList("InputList[" + i + "]", lists1[i]);
+      LinkedListUtils.printList("InputList1[" + i + "]", lists1[i]);
     }
 
     System.out.println("Merged List (Brute Force):");
@@ -141,6 +141,10 @@ public class LC_23_MergeKSortedLists implements Solution {
         LinkedListUtils.createLinkedList(new int[] { 1, 6, 7 }),
         LinkedListUtils.createLinkedList(new int[] { 0, 8, 9 })
     };
+
+    for (int i = 0; i < lists4.length; i++) {
+      LinkedListUtils.printList("InputList2[" + i + "]", lists4[i]);
+    }
 
     System.out.println("Merged List (Brute Force):");
     LinkedListUtils.printList("Output", mergeKListsBruteForce(lists4));
