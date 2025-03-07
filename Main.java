@@ -1,10 +1,10 @@
 import common.Solution;
-import solutions.top_interview_questions.hard.LC_23_MergeKSortedLists;
+import solutions.company_wise.goldman_sachs.easy.LC_706_DesignHashMap;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_23_MergeKSortedLists(); // Replace with the class
+        Solution solution = new LC_706_DesignHashMap(); // Replace with the class
         // you want
         // to run
 
