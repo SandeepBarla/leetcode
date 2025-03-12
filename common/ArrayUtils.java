@@ -10,6 +10,11 @@ public class ArrayUtils {
         System.out.println(label + ": " + Arrays.toString(arr));
     }
 
+    // ✅ Print a string array with a label
+    public static void printStringArray(String label, String[] arr) {
+        System.out.println(label + ": " + Arrays.toString(arr));
+    }
+
     // ✅ Print a character array with a label
     public static void printCharArray(String label, char[] arr) {
         System.out.println(label + ": " + Arrays.toString(arr));
