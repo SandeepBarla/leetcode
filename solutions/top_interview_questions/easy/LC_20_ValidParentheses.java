@@ -12,7 +12,7 @@
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  */
-package leetcode.easy;
+package solutions.top_interview_questions.easy;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
