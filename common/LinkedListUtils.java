@@ -16,7 +16,7 @@ public class LinkedListUtils {
 
     // Print a linked list with a label
     public static void printList(String label, ListNode head) {
-        System.out.print(label + ": ");  // Print the label first
+        System.out.print(label + ": "); // Print the label first
         if (head == null) {
             System.out.println("Empty List");
             return;
@@ -29,5 +29,30 @@ public class LinkedListUtils {
             head = head.next;
         }
         System.out.println();
+    }
+
+    // Create a linked list with a cycle (returns the head)
+    // cyclePos: index to connect tail to (0-based), or -1 if no cycle
+    public static ListNode createCyclicLinkedList(int[] nums, int cyclePos) {
+        if (nums.length == 0)
+            return null;
+
+        ListNode dummyHead = new ListNode(0);
+        ListNode current = dummyHead;
+        ListNode cycleNode = null;
+
+        for (int i = 0; i < nums.length; i++) {
+            current.next = new ListNode(nums[i]);
+            current = current.next;
+            if (i == cyclePos) {
+                cycleNode = current;
+            }
+        }
+
+        if (cyclePos != -1) {
+            current.next = cycleNode;
+        }
+
+        return dummyHead.next;
     }
 }
