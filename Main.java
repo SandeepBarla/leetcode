@@ -1,10 +1,10 @@
 import common.Solution;
-import solutions.pareto_problem_set.medium.LC_146_LRUCache;
+import solutions.pareto_problem_set.easy.LC_543_DiameterOfBinaryTree;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_146_LRUCache(); // Replace with the class you want to run
+        Solution solution = new LC_543_DiameterOfBinaryTree(); // Replace with the class you want to run
 
         System.out.println("\n--- Running " + solution.getClass().getSimpleName() + " ---");
         solution.run();
