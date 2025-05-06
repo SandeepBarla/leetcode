@@ -14,7 +14,7 @@
  * - HashMap: O(k)
  * - Array: O(1) (fixed size for ASCII)
  */
-package leetcode.medium;
+package solutions.top_interview_questions.medium;
 
 import java.util.Arrays;
 import java.util.HashMap;

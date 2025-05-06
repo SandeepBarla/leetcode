@@ -11,7 +11,7 @@
  * Time Complexity: O(n^2)
  * Space Complexity: O(1) (excluding the output list)
  */
-package leetcode.medium;
+package solutions.top_interview_questions.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;

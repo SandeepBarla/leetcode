@@ -12,7 +12,7 @@
  * Time Complexity: O(n)
  * Space Complexity: O(1) (fixed size 26 array for uppercase letters)
  */
-package leetcode.medium;
+package solutions.top_interview_questions.medium;
 
 import common.Solution;
 
