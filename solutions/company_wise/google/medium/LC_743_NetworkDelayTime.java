@@ -11,7 +11,7 @@
  * Time Complexity: O(E log N), where E is the number of edges and N is the number of nodes.
  * Space Complexity: O(N + E) — for graph storage, priority queue, and visited map.
  */
-package solutions.company_wise.google;
+package solutions.company_wise.google.medium;
 
 import java.util.ArrayList;
 import java.util.Comparator;
