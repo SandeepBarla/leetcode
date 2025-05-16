@@ -1,10 +1,10 @@
 import common.Solution;
-import solutions.company_wise.google.medium.LC_2096_StepByStepDirectionsInBinaryTree;
+import solutions.neetcode_150.medium.LC_518_CoinChangeII;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_2096_StepByStepDirectionsInBinaryTree(); // Replace with the class you want to run
+        Solution solution = new LC_518_CoinChangeII(); // Replace with the class you want to run
 
         System.out.println("\n--- Running " + solution.getClass().getSimpleName() + " ---");
         solution.run();
