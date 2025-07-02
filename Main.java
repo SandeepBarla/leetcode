@@ -1,10 +1,10 @@
 import common.Solution;
-import solutions.neetcode_150.medium.LC_198_HouseRobber;
+import solutions.neetcode_150.medium.LC_213_HouseRobberII;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_198_HouseRobber(); // Replace with the class you want to run
+        Solution solution = new LC_213_HouseRobberII(); // Replace with the class you want to run
 
         System.out.println("\n--- Running " + solution.getClass().getSimpleName() + " ---");
         solution.run();
