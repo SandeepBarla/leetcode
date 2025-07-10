@@ -1,10 +1,10 @@
 import common.Solution;
-import solutions.neetcode_150.medium.LC_355_DesignTwitter;
+import solutions.neetcode_150.medium.LC_684_RedundantConnection;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_355_DesignTwitter(); // Replace with the class you want to run
+        Solution solution = new LC_684_RedundantConnection(); // Replace with the class you want to run
 
         System.out.println("\n--- Running " + solution.getClass().getSimpleName() + " ---");
         solution.run();
