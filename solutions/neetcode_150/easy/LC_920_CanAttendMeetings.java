@@ -18,23 +18,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import common.Interval;
 import common.Solution;
 
 public class LC_920_CanAttendMeetings implements Solution {
-
-  public static class Interval {
-    public int start, end;
-
-    public Interval(int start, int end) {
-      this.start = start;
-      this.end = end;
-    }
-
-    @Override
-    public String toString() {
-      return "[" + start + ", " + end + "]";
-    }
-  }
 
   public boolean canAttendMeetings(List<Interval> intervals) {
     if (intervals == null || intervals.size() <= 1)
