@@ -1,10 +1,11 @@
 import common.Solution;
-import solutions.neetcode_150.easy.LC_338_CountingBits;
+import solutions.neetcode_150.medium.LC_323_NumberOfConnectedComponentsInAnUndirectedGraph;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_338_CountingBits(); // Replace with the class you want to run
+        Solution solution = new LC_323_NumberOfConnectedComponentsInAnUndirectedGraph(); // Replace with the class you
+                                                                                         // want to run
 
         System.out.println("\n--- Running " + solution.getClass().getSimpleName() + " ---");
         solution.run();
