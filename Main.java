@@ -1,10 +1,10 @@
 import common.Solution;
-import solutions.neetcode_150.medium.LC_261_GraphValidTree;
+import solutions.neetcode_150.hard.LC_269_AlienDictionary;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_261_GraphValidTree(); // Replace with the class you
+        Solution solution = new LC_269_AlienDictionary(); // Replace with the class you
                                                                                          // want to run
 
         System.out.println("\n--- Running " + solution.getClass().getSimpleName() + " ---");
