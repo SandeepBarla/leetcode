@@ -1,10 +1,10 @@
 import common.Solution;
-import solutions.top_interview_questions.medium.LC_5_LongestPalindromicSubstring;
+import solutions.neetcode_150.medium.LC_846_HandOfStraights;
 
 public class Main {
     public static void main(String[] args) {
         // Change this line to test any solution
-        Solution solution = new LC_5_LongestPalindromicSubstring(); // Replace with the class you want to run
+        Solution solution = new LC_846_HandOfStraights(); // Replace with the class you want to run
 
         System.out.println("\n--- Running " + solution.getClass().getSimpleName() + " ---");
         solution.run();

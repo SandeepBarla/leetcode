@@ -1,35 +1,104 @@
-# LeetCode Solutions Repository
+# LeetCode Solutions
 
-This repository contains LeetCode solutions organized by programming language for long-term maintenance.
+A production-ready, multi-language repository containing well-documented LeetCode solutions with standardized code patterns, comprehensive testing, and optimized algorithms across Java, Python, and C#.
 
-## Project Structure
+## Overview
+
+This repository serves as a comprehensive reference for technical interview preparation and algorithmic problem-solving. Solutions are organized by difficulty, category, and company-specific patterns, with emphasis on code quality, maintainability, and multiple algorithmic approaches.
+
+## Repository Structure
 
 ```
-LeetCode/
-├── java/                    # Java solutions and utilities
-│   ├── solutions/          # Organized Java solution files
-│   ├── common/            # Common Java utilities and interfaces
-│   └── Main.java          # Main runner for testing Java solutions
-├── python/                # Python solutions and utilities
-│   ├── easy/             # Easy difficulty Python solutions
-│   ├── medium/           # Medium difficulty Python solutions
-│   ├── .venv/            # Python virtual environment
-│   ├── main.py           # Main Python runner
-│   └── solution_base.py  # Base classes for Python solutions
-├── csharp/               # C# solutions
-│   └── solutions/        # Organized C# solution files
-└── .vscode/              # VS Code configuration (Java-focused)
+├── java/                           # Primary Java solutions with full standardization
+│   ├── solutions/
+│   │   ├── neetcode_150/          # Curated essential problems for interviews
+│   │   ├── top_interview_questions/ # Most frequently asked problems
+│   │   ├── company_wise/          # Company-specific problem patterns
+│   │   └── pareto_problem_set/    # High-impact problem subset
+│   ├── common/                    # Shared utilities and data structures
+│   │   ├── Solution.java          # Standard interface for all solutions
+│   │   ├── TreeNode.java          # Binary tree implementations
+│   │   ├── ListNode.java          # Linked list structures
+│   │   └── *Utils.java            # Helper utilities for common operations
+│   └── Main.java                  # Test harness and solution runner
+├── python/                        # Python implementations
+│   ├── easy/                      # Easy difficulty solutions
+│   ├── medium/                    # Medium difficulty solutions
+│   ├── main.py                    # Python test runner
+│   └── solution_base.py           # Base classes and utilities
+├── csharp/                        # C# implementations
+│   └── solutions/                 # Organized C# solution files
+└── .vscode/                       # Development environment configuration
 ```
 
-## Setup
+## Solution Standards
 
-### Java
+### Java Implementation Standards
 
-- **JDK**: Java 23 (configured in VS Code settings)
-- **IDE**: VS Code with Java extension pack or IntelliJ IDEA
-- **Entry Point**: `java/Main.java`
+All Java solutions follow a consistent pattern for maintainability and readability:
 
-To run Java solutions:
+**File Naming Convention:**
+
+```
+LC_{problem_number}_{ProblemNameInCamelCase}.java
+```
+
+**Class Structure:**
+
+```java
+/**
+ * LeetCode {number}: {Problem Title}
+ * URL: https://leetcode.com/problems/{problem-slug}/
+ * Difficulty: {Easy|Medium|Hard}
+ *
+ * Problem Description:
+ * {Brief problem description}
+ *
+ * Approach 1: {Algorithm Name}
+ * - {High-level approach explanation}
+ * - Time Complexity: O(...)
+ * - Space Complexity: O(...)
+ *
+ * Approach 2: {Alternative Algorithm} (if applicable)
+ * - {Alternative approach explanation}
+ * - Time Complexity: O(...)
+ * - Space Complexity: O(...)
+ */
+public class LC_{number}_{ProblemName} implements Solution {
+
+    public ReturnType algorithmNameOptimal(Parameters...) {
+        // Optimized implementation
+    }
+
+    public ReturnType algorithmNameBruteForce(Parameters...) {
+        // Brute force implementation for comparison
+    }
+
+    @Override
+    public void run() {
+        // Comprehensive test cases with edge cases
+    }
+}
+```
+
+### Key Features
+
+- **Multiple Approaches**: Each problem includes 2-3 different algorithmic approaches when applicable
+- **Descriptive Naming**: Method names clearly indicate the algorithmic approach (`twoSumHashMap`, `binarySearchRecursive`)
+- **Comprehensive Testing**: All approaches validated with multiple test cases including edge cases
+- **Complexity Analysis**: Detailed time and space complexity analysis for each approach
+- **Interface Compliance**: All solutions implement the `Solution` interface for consistent testing
+
+## Development Setup
+
+### Java Environment
+
+**Prerequisites:**
+
+- JDK 21+ (configured for compatibility)
+- VS Code with Java Extension Pack or IntelliJ IDEA
+
+**Build and Run:**
 
 ```bash
 cd java
@@ -37,59 +106,79 @@ javac Main.java
 java Main
 ```
 
-### Python
+**Testing Specific Solutions:**
+Modify the solution instantiation in `Main.java`:
 
-- **Version**: Python 3.x
-- **Virtual Environment**: Located in `python/.venv/`
-- **Entry Point**: `python/main.py`
+```java
+Solution solution = new LC_1_TwoSum(); // Replace with desired solution
+```
 
-To run Python solutions:
+### Python Environment
+
+**Prerequisites:**
+
+- Python 3.8+
+- Virtual environment (included in repository)
+
+**Setup:**
 
 ```bash
 cd python
-source .venv/bin/activate  # On macOS/Linux
-# .venv\Scripts\activate   # On Windows
+source .venv/bin/activate    # Unix/macOS
+# .venv\Scripts\activate     # Windows
 python main.py
 ```
 
-### C#
+### C# Environment
 
-- **Runtime**: .NET Core/.NET 5+
-- **IDE**: Visual Studio, VS Code with C# extension, or Rider
-- **Entry Point**: Individual .cs files can be compiled and run separately
+**Prerequisites:**
 
-To run C# solutions:
+- .NET 5+ or .NET Core 3.1+
+- Visual Studio, VS Code with C# extension, or JetBrains Rider
+
+**Execution:**
 
 ```bash
-cd csharp/solutions/top_interview_questions/easy
-dotnet run <filename>.cs  # or compile individually
+cd csharp/solutions/{category}/{difficulty}
+dotnet run SolutionFile.cs
 ```
 
-## Adding New Solutions
+## Contributing
 
-### Java Solutions
+### Adding New Solutions
 
-1. Create your solution class in the appropriate directory under `java/solutions/`
-2. Implement the `Solution` interface from `common.Solution`
-3. Add a `run()` method to demonstrate your solution
-4. Update `java/Main.java` to test your new solution
+1. **Choose appropriate directory** based on problem category and difficulty
+2. **Follow naming conventions** as specified above
+3. **Implement the `Solution` interface** (Java) or follow established patterns (Python/C#)
+4. **Include multiple approaches** when different algorithmic strategies exist
+5. **Add comprehensive test cases** covering normal cases, edge cases, and boundary conditions
+6. **Document time and space complexity** for each approach
 
-### Python Solutions
+### Code Quality Standards
 
-1. Create your solution file in `python/easy/` or `python/medium/`
-2. Follow the pattern established in existing Python solutions
-3. Update `python/main.py` to test your new solution
+- **Readable variable names** that clearly indicate purpose
+- **Comprehensive comments** explaining complex algorithmic steps
+- **Consistent formatting** following language-specific conventions
+- **Error handling** for edge cases and invalid inputs
+- **Performance considerations** documented in complexity analysis
 
-### C# Solutions
+## Problem Categories
 
-1. Create your solution file in the appropriate directory under `csharp/solutions/`
-2. Follow C# naming conventions and structure
-3. Compile and test individually as needed
+**NeetCode 150**: Essential problems covering fundamental algorithms and data structures commonly encountered in technical interviews.
 
-## Configuration Notes
+**Top Interview Questions**: Most frequently asked problems across major technology companies, organized by difficulty level.
 
-- VS Code is configured to use the `java/` directory as the main source path
-- Python virtual environment is excluded from Java project scanning
-- All three languages (Java, Python, C#) can coexist without interference
-- Git ignores compiled files and IDE-specific configurations
-- Each language has its own dedicated directory structure
+**Company-Specific**: Solutions organized by company interview patterns, including Amazon (scale and leadership principles), Google (algorithmic optimization), and Goldman Sachs (financial sector patterns).
+
+**Pareto Problem Set**: High-impact problems that provide maximum interview preparation value with focused study effort.
+
+## Development Configuration
+
+The repository includes pre-configured development settings optimized for Java development while supporting multi-language work:
+
+- **VS Code Configuration**: Java-focused settings with proper exclusions for other languages
+- **Build System**: Configured for Java compilation with appropriate classpath management
+- **Git Configuration**: Excludes build artifacts and IDE-specific files while preserving essential configuration
+- **Multi-language Support**: Isolated environments for Java, Python, and C# development
+
+This repository is designed for long-term maintenance and collaborative development, providing a solid foundation for technical interview preparation and algorithmic study.

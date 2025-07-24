@@ -58,8 +58,8 @@ gradle-app.setting
 bin/
 tmp/
 .metadata
-.classpath
-.project
+# .classpath   # Keep project-specific classpath
+# .project     # Keep project-specific project file
 *.tmp
 *.bak
 *.swp

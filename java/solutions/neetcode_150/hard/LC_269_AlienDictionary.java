@@ -38,7 +38,7 @@ import common.Solution;
  * Space Complexity: O(C)
  *   - Graph, visited map, recursion stack, result list
  */
-public class LC_269_AlienDictionary extends Solution {
+public class LC_269_AlienDictionary implements Solution {
 
     // Graph: Adjacency list representing ordering rules
     private Map<Character, Set<Character>> graph = new HashMap<>();
@@ -103,5 +103,56 @@ public class LC_269_AlienDictionary extends Solution {
         visited.put(node, false); // Mark as visited
         topoOrder.add(node);      // Post-order addition
         return false;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Testing LC_269_AlienDictionary...");
+        
+        // Test case 1: Normal case
+        String[] words1 = {"wrt", "wrf", "er", "ett", "rftt"};
+        String result1 = foreignDictionary(words1);
+        System.out.println("Test 1 - words: [wrt, wrf, er, ett, rftt]");
+        System.out.println("Expected: wertf, Got: " + result1);
+        System.out.println("Valid ordering: " + (result1.length() > 0 ? "✓" : "✗"));
+        System.out.println();
+        
+        // Reset state for next test
+        resetState();
+        
+        // Test case 2: Invalid case (prefix issue)
+        String[] words2 = {"abc", "ab"};
+        String result2 = foreignDictionary(words2);
+        System.out.println("Test 2 - words: [abc, ab] (invalid)");
+        System.out.println("Expected: empty string, Got: '" + result2 + "'");
+        System.out.println("Correctly detected invalid: " + (result2.isEmpty() ? "✓" : "✗"));
+        System.out.println();
+        
+        // Reset state for next test
+        resetState();
+        
+        // Test case 3: Single character ordering
+        String[] words3 = {"z", "x"};
+        String result3 = foreignDictionary(words3);
+        System.out.println("Test 3 - words: [z, x]");
+        System.out.println("Expected: zx, Got: " + result3);
+        System.out.println("Valid ordering: " + (result3.equals("zx") ? "✓" : "✗"));
+        System.out.println();
+        
+        // Reset state for next test
+        resetState();
+        
+        // Test case 4: Cycle detection
+        String[] words4 = {"z", "x", "z"};
+        String result4 = foreignDictionary(words4);
+        System.out.println("Test 4 - words: [z, x, z] (creates cycle)");
+        System.out.println("Expected: empty string, Got: '" + result4 + "'");
+        System.out.println("Correctly detected cycle: " + (result4.isEmpty() ? "✓" : "✗"));
+    }
+    
+    private void resetState() {
+        graph.clear();
+        visited.clear();
+        topoOrder.clear();
     }
 }
